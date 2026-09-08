@@ -189,17 +189,17 @@
     "monitor": true,
     "checks": [
       {
-        "type": "ColumnNotEmptyRule",
+        "type": "ColumnUniqueValuesRule",
         "columns": [
           "product_id"
         ],
-        "thresholdType": "ENTIRE_COLUMN_NOT_EMPTY",
-        "maximum": 0.0,
-        "maximumEnabled": false,
-        "softMaximum": 0.0,
-        "softMaximumEnabled": false,
+        "thresholdType": "ENTIRE_COLUMN",
+        "minimum": 0.0,
+        "minimumEnabled": false,
+        "softMinimum": 0.0,
+        "softMinimumEnabled": false,
         "id": "q3wlM09d",
-        "displayName": "No empty values exist in product_id",
+        "displayName": "All values of product_id are unique",
         "computeOnBuildMode": "PARTITION",
         "autoRun": false,
         "enabled": true
