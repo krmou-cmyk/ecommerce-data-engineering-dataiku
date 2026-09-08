@@ -185,17 +185,17 @@
     "monitor": true,
     "checks": [
       {
-        "type": "ColumnNotEmptyRule",
+        "type": "ColumnUniqueValuesRule",
         "columns": [
           "order_id"
         ],
-        "thresholdType": "ENTIRE_COLUMN_NOT_EMPTY",
-        "maximum": 0.0,
-        "maximumEnabled": false,
-        "softMaximum": 0.0,
-        "softMaximumEnabled": false,
+        "thresholdType": "ENTIRE_COLUMN",
+        "minimum": 0.0,
+        "minimumEnabled": false,
+        "softMinimum": 0.0,
+        "softMinimumEnabled": false,
         "id": "85Jop5fJ",
-        "displayName": "No empty values exist in order_id",
+        "displayName": "All values of order_id are unique",
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
