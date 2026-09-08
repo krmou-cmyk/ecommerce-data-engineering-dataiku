@@ -5,22 +5,15 @@
   },
   "keys": [
     {
-      "column": "order_id"
-    }
-  ],
-  "values": [
-    {
       "last": false,
       "max": false,
-      "firstLastNotNull": false,
-      "column": "payment_sequential",
+      "column": "order_id",
       "count": false,
       "sum": false,
       "concat": false,
-      "concatDistinct": false,
-      "sum2": false,
-      "min": false,
+      "type": "string",
       "countDistinct": false,
+      "min": false,
       "avg": false,
       "median": false,
       "stddev": false,
@@ -30,10 +23,34 @@
       "last": false,
       "max": false,
       "firstLastNotNull": false,
-      "column": "payment_type",
+      "column": "payment_sequential",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "bigint",
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "median": false,
+      "$selected": false,
+      "stddev": false,
+      "first": false
+    }
+  ],
+  "values": [
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "payment_type",
+      "count": false,
+      "$idx": 0,
+      "sum": false,
+      "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -49,8 +66,10 @@
       "firstLastNotNull": false,
       "column": "payment_installments",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -66,8 +85,10 @@
       "firstLastNotNull": false,
       "column": "payment_value",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -83,8 +104,10 @@
       "firstLastNotNull": false,
       "column": "_source_system",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -100,8 +123,10 @@
       "firstLastNotNull": false,
       "column": "_ingestion_timestamp",
       "count": false,
+      "$idx": 4,
       "sum": false,
       "concat": false,
+      "type": "date",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -117,8 +142,10 @@
       "firstLastNotNull": false,
       "column": "_batch_id",
       "count": false,
+      "$idx": 5,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -172,8 +199,28 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "order_id",
+            "type": "string"
+          },
+          {
+            "name": "payment_sequential",
+            "type": "bigint"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
