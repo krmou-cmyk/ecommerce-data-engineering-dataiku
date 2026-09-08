@@ -1,4 +1,4 @@
-import requests
+"base_currency"import requests
 import pandas as pd
 import dataiku
 
