@@ -67,7 +67,7 @@
     "main": {
       "items": [
         {
-          "ref": "raw_products",
+          "ref": "bronze_products",
           "appendMode": false
         }
       ]
