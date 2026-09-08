@@ -97,6 +97,28 @@
         "truncate_limit": 0
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "formats": [
+          "yyyy-MM-dd HH:mm:ss"
+        ],
+        "columns": [
+          "_ingestion_timestamp"
+        ],
+        "timezone_id": "Europe/Paris",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto",
+        "outType": {
+          "name": "out",
+          "type": "dateonly"
+        }
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
