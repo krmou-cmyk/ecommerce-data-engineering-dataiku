@@ -8,31 +8,27 @@
       },
       {
         "d": true,
-        "name": "customer_id"
+        "name": "order_item_id"
       },
       {
         "d": true,
-        "name": "order_status"
+        "name": "product_id"
       },
       {
         "d": true,
-        "name": "order_purchase_timestamp"
+        "name": "seller_id"
       },
       {
         "d": true,
-        "name": "order_approved_at"
+        "name": "shipping_limit_date"
       },
       {
         "d": true,
-        "name": "order_delivered_carrier_date"
+        "name": "price"
       },
       {
         "d": true,
-        "name": "order_delivered_customer_date"
-      },
-      {
-        "d": true,
-        "name": "order_estimated_delivery_date"
+        "name": "freight_value"
       },
       {
         "d": true,
@@ -148,17 +144,23 @@
   "analysisColumnData": {},
   "flagNumericValues": true,
   "columnWidthsByName": {
-    "_source_system": 120,
-    "order_status": 134,
     "order_delivered_customer_date": 253,
+    "order_approved_at": 169,
+    "_source_system": 120,
+    "order_item_id": 113,
+    "order_status": 134,
     "order_purchase_timestamp": 218,
     "_ingestion_timestamp": 190,
     "_batch_id": 120,
     "order_estimated_delivery_date": 253,
+    "price": 134,
+    "product_id": 239,
     "customer_id": 239,
     "order_id": 239,
     "order_delivered_carrier_date": 246,
-    "order_approved_at": 169
+    "freight_value": 134,
+    "seller_id": 239,
+    "shipping_limit_date": 183
   },
   "sorting": [],
   "globalSearchQuery": "",
