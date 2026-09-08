@@ -99,9 +99,9 @@
       {"name":"order_status","type":"string"},
       {"name":"order_purchase_timestamp","type":"datetimenotz"},
       {"name":"order_approved_at","type":"datetimenotz"},
-      {"name":"order_delivered_carrier_date","type":"dateonly"},
-      {"name":"order_delivered_customer_date","type":"dateonly"},
-      {"name":"order_estimated_delivery_date","type":"dateonly"},
+      {"name":"order_delivered_carrier_date","type":"datetimenotz"},
+      {"name":"order_delivered_customer_date","type":"datetimenotz"},
+      {"name":"order_estimated_delivery_date","type":"datetimenotz"},
       {"name":"_source_system","type":"string"},
       {"name":"_ingestion_timestamp","type":"dateonly"},
       {"name":"_batch_id","type":"string"}
