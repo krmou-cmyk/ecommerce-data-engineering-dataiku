@@ -94,7 +94,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"date","type":"string"},
+      {"name":"date","type":"dateonly"},
       {"name":"base_currency","type":"string"},
       {"name":"target_currency","type":"string"},
       {"name":"exchange_rate","type":"double"},
