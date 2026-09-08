@@ -16,7 +16,7 @@
       },
       {
         "d": true,
-        "name": "product_description_lenght"
+        "name": "product_description_length"
       },
       {
         "d": true,
@@ -86,14 +86,45 @@
   },
   "steps": [
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "StringTransformer",
       "params": {
         "mode": "TRIM",
         "columns": [
-          "product_id"
+          "product_id",
+          "product_category_name"
+        ],
+        "appliesTo": "COLUMNS",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "product_description_lenght",
+            "to": "product_description_length"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TO_LOWER",
+        "columns": [
+          "product_category_name"
         ],
         "appliesTo": "SINGLE_COLUMN",
         "truncate_limit": 0
@@ -129,18 +160,19 @@
   "analysisColumnData": {},
   "flagNumericValues": true,
   "columnWidthsByName": {
-    "_source_system": 120,
-    "product_category_name": 225,
-    "_ingestion_timestamp": 190,
-    "product_height_cm": 143,
-    "_batch_id": 120,
-    "product_id": 239,
+    "product_description_length": 210,
     "product_weight_g": 135,
     "product_photos_qty": 150,
     "product_width_cm": 135,
     "product_name_lenght": 158,
     "product_description_lenght": 210,
-    "product_length_cm": 143
+    "product_length_cm": 143,
+    "_source_system": 120,
+    "product_category_name": 225,
+    "_ingestion_timestamp": 190,
+    "product_height_cm": 143,
+    "_batch_id": 120,
+    "product_id": 239
   },
   "sorting": [],
   "globalSearchQuery": "",
