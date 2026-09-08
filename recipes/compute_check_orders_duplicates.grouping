@@ -5,7 +5,21 @@
   },
   "keys": [
     {
-      "column": "order_id"
+      "last": false,
+      "max": false,
+      "column": "order_id",
+      "count": false,
+      "$idx": 0,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "median": false,
+      "$selected": false,
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,8 +29,10 @@
       "firstLastNotNull": false,
       "column": "order_item_id",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -32,8 +48,10 @@
       "firstLastNotNull": false,
       "column": "product_id",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -49,8 +67,10 @@
       "firstLastNotNull": false,
       "column": "seller_id",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -66,8 +86,10 @@
       "firstLastNotNull": false,
       "column": "shipping_limit_date",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
+      "type": "datetimenotz",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -83,8 +105,10 @@
       "firstLastNotNull": false,
       "column": "price",
       "count": false,
+      "$idx": 4,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -100,8 +124,10 @@
       "firstLastNotNull": false,
       "column": "freight_value",
       "count": false,
+      "$idx": 5,
       "sum": false,
       "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -117,8 +143,10 @@
       "firstLastNotNull": false,
       "column": "_source_system",
       "count": false,
+      "$idx": 6,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -134,8 +162,10 @@
       "firstLastNotNull": false,
       "column": "_ingestion_timestamp",
       "count": false,
+      "$idx": 7,
       "sum": false,
       "concat": false,
+      "type": "date",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -151,8 +181,10 @@
       "firstLastNotNull": false,
       "column": "_batch_id",
       "count": false,
+      "$idx": 8,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -206,8 +238,24 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "order_id",
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
