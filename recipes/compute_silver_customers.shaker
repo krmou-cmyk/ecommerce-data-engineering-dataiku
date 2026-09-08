@@ -1,6 +1,40 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "customer_id"
+      },
+      {
+        "d": true,
+        "name": "customer_unique_id"
+      },
+      {
+        "d": true,
+        "name": "customer_zip_code_prefix"
+      },
+      {
+        "d": true,
+        "name": "customer_city"
+      },
+      {
+        "d": true,
+        "name": "customer_state"
+      },
+      {
+        "d": true,
+        "name": "_source_system"
+      },
+      {
+        "d": true,
+        "name": "_ingestion_timestamp"
+      },
+      {
+        "d": true,
+        "name": "_batch_id"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +64,42 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TO_LOWER",
+        "columns": [
+          "customer_city"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TRIM",
+        "columns": [
+          "customer_city"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +127,16 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "_source_system": 120,
+    "customer_unique_id": 239,
+    "customer_state": 120,
+    "_ingestion_timestamp": 190,
+    "_batch_id": 120,
+    "customer_id": 239,
+    "customer_zip_code_prefix": 195,
+    "customer_city": 148
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
