@@ -227,7 +227,7 @@
           "base_currency"
         ],
         "valueSet": [
-          "EUR"
+          "BRL"
         ],
         "id": "NPk2zCCt",
         "displayName": "All values of base_currency are in set",
