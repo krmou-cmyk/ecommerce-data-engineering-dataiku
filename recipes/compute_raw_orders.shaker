@@ -1,6 +1,52 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "customer_id"
+      },
+      {
+        "d": true,
+        "name": "order_status"
+      },
+      {
+        "d": true,
+        "name": "order_purchase_timestamp"
+      },
+      {
+        "d": true,
+        "name": "order_approved_at"
+      },
+      {
+        "d": true,
+        "name": "order_delivered_carrier_date"
+      },
+      {
+        "d": true,
+        "name": "order_delivered_customer_date"
+      },
+      {
+        "d": true,
+        "name": "order_estimated_delivery_date"
+      },
+      {
+        "d": true,
+        "name": "_source_system"
+      },
+      {
+        "d": true,
+        "name": "_ingestion_timestamp"
+      },
+      {
+        "d": true,
+        "name": "_batch_id"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +76,50 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "\"OLIST\"",
+        "column": "_source_system",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "now()",
+        "column": "_ingestion_timestamp",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateFormatter",
+      "params": {
+        "inCol": "_ingestion_timestamp",
+        "outCol": "_batch_id",
+        "format": "yyyyMMdd_HHmmss",
+        "timezone_id": "UTC",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +147,19 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "_source_system": 120,
+    "order_status": 134,
+    "order_delivered_customer_date": 253,
+    "order_purchase_timestamp": 218,
+    "_ingestion_timestamp": 190,
+    "_batch_id": 120,
+    "order_estimated_delivery_date": 253,
+    "customer_id": 239,
+    "order_id": 239,
+    "order_delivered_carrier_date": 246,
+    "order_approved_at": 169
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
