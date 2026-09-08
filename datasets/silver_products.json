@@ -97,7 +97,7 @@
       {"name":"product_id","type":"string"},
       {"name":"product_category_name","type":"string"},
       {"name":"product_name_lenght","type":"bigint"},
-      {"name":"product_description_lenght","type":"bigint"},
+      {"name":"product_description_length","type":"bigint"},
       {"name":"product_photos_qty","type":"bigint"},
       {"name":"product_weight_g","type":"bigint"},
       {"name":"product_length_cm","type":"bigint"},
