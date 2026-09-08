@@ -1,6 +1,48 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "order_item_id"
+      },
+      {
+        "d": true,
+        "name": "product_id"
+      },
+      {
+        "d": true,
+        "name": "seller_id"
+      },
+      {
+        "d": true,
+        "name": "shipping_limit_date"
+      },
+      {
+        "d": true,
+        "name": "price"
+      },
+      {
+        "d": true,
+        "name": "freight_value"
+      },
+      {
+        "d": true,
+        "name": "_source_system"
+      },
+      {
+        "d": true,
+        "name": "_ingestion_timestamp"
+      },
+      {
+        "d": true,
+        "name": "_batch_id"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +72,29 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TRIM",
+        "columns": [
+          "order_id",
+          "product_id",
+          "seller_id"
+        ],
+        "appliesTo": "COLUMNS",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +122,18 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "order_item_id": 113,
+    "_source_system": 120,
+    "_ingestion_timestamp": 190,
+    "_batch_id": 120,
+    "price": 134,
+    "product_id": 239,
+    "order_id": 239,
+    "freight_value": 134,
+    "seller_id": 239,
+    "shipping_limit_date": 183
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
