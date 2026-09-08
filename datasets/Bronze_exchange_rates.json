@@ -97,7 +97,10 @@
       {"name":"date","type":"string"},
       {"name":"base_currency","type":"string"},
       {"name":"target_currency","type":"string"},
-      {"name":"exchange_rate","type":"double"}
+      {"name":"exchange_rate","type":"double"},
+      {"name":"_source_system","type":"string"},
+      {"name":"_ingestion_timestamp","type":"date"},
+      {"name":"_batch_id","type":"string"}
     ],
     "userModified": true
   },
