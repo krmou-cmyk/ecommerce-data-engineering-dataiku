@@ -185,18 +185,18 @@
     "monitor": true,
     "checks": [
       {
-        "type": "ColumnUniqueValuesRule",
+        "type": "ColumnNotEmptyRule",
         "columns": [
           "order_id",
           "payment_sequential"
         ],
-        "thresholdType": "ENTIRE_COLUMN",
-        "minimum": 0.0,
-        "minimumEnabled": false,
-        "softMinimum": 0.0,
-        "softMinimumEnabled": false,
+        "thresholdType": "ENTIRE_COLUMN_NOT_EMPTY",
+        "maximum": 0.0,
+        "maximumEnabled": false,
+        "softMaximum": 0.0,
+        "softMaximumEnabled": false,
         "id": "85Jop5fJ",
-        "displayName": "All values of 2 columns are unique",
+        "displayName": "No empty values exist in 2 columns",
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
