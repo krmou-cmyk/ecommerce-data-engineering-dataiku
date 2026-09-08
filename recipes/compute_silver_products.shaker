@@ -12,7 +12,7 @@
       },
       {
         "d": true,
-        "name": "product_name_lenght"
+        "name": "product_name_length"
       },
       {
         "d": true,
@@ -117,7 +117,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "StringTransformer",
@@ -128,6 +128,21 @@
         ],
         "appliesTo": "SINGLE_COLUMN",
         "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "product_name_lenght",
+            "to": "product_name_length"
+          }
+        ]
       },
       "alwaysShowComment": false
     }
@@ -161,6 +176,7 @@
   "flagNumericValues": true,
   "columnWidthsByName": {
     "product_description_length": 210,
+    "product_name_length": 158,
     "product_weight_g": 135,
     "product_photos_qty": 150,
     "product_width_cm": 135,
