@@ -1,0 +1,140 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL",
+      "list": [
+        {
+          "name": "order_id",
+          "d": true
+        },
+        {
+          "name": "customer_id",
+          "d": true
+        },
+        {
+          "name": "order_status",
+          "d": true
+        },
+        {
+          "name": "order_purchase_timestamp",
+          "d": true
+        },
+        {
+          "name": "order_approved_at",
+          "d": true
+        },
+        {
+          "name": "order_delivered_carrier_date",
+          "d": true
+        },
+        {
+          "name": "order_delivered_customer_date",
+          "d": true
+        },
+        {
+          "name": "order_estimated_delivery_date",
+          "d": true
+        },
+        {
+          "name": "_source_system",
+          "d": true
+        },
+        {
+          "name": "_ingestion_timestamp",
+          "d": true
+        },
+        {
+          "name": "_batch_id",
+          "d": true
+        }
+      ]
+    },
+    "columnOrder": [],
+    "columnWidthsByName": {
+      "order_id": 239,
+      "customer_id": 239,
+      "order_status": 134,
+      "order_purchase_timestamp": 218,
+      "order_approved_at": 169,
+      "order_delivered_carrier_date": 246,
+      "order_delivered_customer_date": 253,
+      "order_estimated_delivery_date": 253,
+      "_source_system": 120,
+      "_ingestion_timestamp": 165,
+      "_batch_id": 120
+    },
+    "columnUseScientificNotationByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "individualColumnsRules": [],
+      "valueColoringMode": "HASH",
+      "coloringGroups": []
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 1788878767543
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "ascending": true,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "interactiveSearch": {
+    "savedQueries": []
+  },
+  "customMeasures": [],
+  "reusableDimensions": [],
+  "hierarchies": []
+}
