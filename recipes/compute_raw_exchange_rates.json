@@ -20,12 +20,7 @@
   "dkuProperties": [],
   "inputs": {
     "main": {
-      "items": [
-        {
-          "ref": "raw_exchange_rates",
-          "deps": []
-        }
-      ]
+      "items": []
     }
   },
   "outputs": {
