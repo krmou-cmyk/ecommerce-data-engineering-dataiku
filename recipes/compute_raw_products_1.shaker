@@ -4,39 +4,23 @@
     "list": [
       {
         "d": true,
-        "name": "product_id"
+        "name": "order_id"
       },
       {
         "d": true,
-        "name": "product_category_name"
+        "name": "payment_sequential"
       },
       {
         "d": true,
-        "name": "product_name_lenght"
+        "name": "payment_type"
       },
       {
         "d": true,
-        "name": "product_description_lenght"
+        "name": "payment_installments"
       },
       {
         "d": true,
-        "name": "product_photos_qty"
-      },
-      {
-        "d": true,
-        "name": "product_weight_g"
-      },
-      {
-        "d": true,
-        "name": "product_length_cm"
-      },
-      {
-        "d": true,
-        "name": "product_height_cm"
-      },
-      {
-        "d": true,
-        "name": "product_width_cm"
+        "name": "payment_value"
       },
       {
         "d": true,
@@ -153,8 +137,10 @@
   "flagNumericValues": true,
   "columnWidthsByName": {
     "order_delivered_customer_date": 253,
+    "payment_value": 134,
     "product_weight_g": 135,
     "product_photos_qty": 150,
+    "payment_sequential": 150,
     "product_width_cm": 135,
     "order_approved_at": 169,
     "product_name_lenght": 158,
@@ -163,10 +149,12 @@
     "_source_system": 120,
     "order_status": 134,
     "product_category_name": 225,
+    "payment_type": 134,
     "order_purchase_timestamp": 218,
     "_ingestion_timestamp": 190,
     "_batch_id": 120,
     "product_height_cm": 143,
+    "payment_installments": 165,
     "order_estimated_delivery_date": 253,
     "product_id": 239,
     "customer_id": 239,
