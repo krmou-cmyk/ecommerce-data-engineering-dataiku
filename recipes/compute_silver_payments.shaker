@@ -1,6 +1,40 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "payment_sequential"
+      },
+      {
+        "d": true,
+        "name": "payment_type"
+      },
+      {
+        "d": true,
+        "name": "payment_installments"
+      },
+      {
+        "d": true,
+        "name": "payment_value"
+      },
+      {
+        "d": true,
+        "name": "_source_system"
+      },
+      {
+        "d": true,
+        "name": "_ingestion_timestamp"
+      },
+      {
+        "d": true,
+        "name": "_batch_id"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +64,43 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TRIM",
+        "columns": [
+          "order_id",
+          "payment_type"
+        ],
+        "appliesTo": "COLUMNS",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TO_LOWER",
+        "columns": [
+          "payment_type"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +128,16 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "_source_system": 120,
+    "payment_type": 134,
+    "_ingestion_timestamp": 190,
+    "payment_installments": 165,
+    "payment_value": 134,
+    "_batch_id": 120,
+    "payment_sequential": 150,
+    "order_id": 239
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
