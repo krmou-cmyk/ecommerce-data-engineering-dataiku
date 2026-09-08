@@ -82,12 +82,12 @@
   },
   "steps": [
     {
-      "preview": false,
+      "preview": true,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "StringTransformer",
       "params": {
-        "mode": "TRIM",
+        "mode": "TO_LOWER",
         "columns": [
           "order_id",
           "customer_id",
