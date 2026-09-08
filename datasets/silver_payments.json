@@ -183,7 +183,28 @@
   },
   "metricsChecks": {
     "monitor": false,
-    "checks": [],
+    "checks": [
+      {
+        "type": "ColumnNotEmptyRule",
+        "columns": [
+          "order_id",
+          "payment_sequential",
+          "payment_type",
+          "payment_installments",
+          "payment_value"
+        ],
+        "thresholdType": "ENTIRE_COLUMN_NOT_EMPTY",
+        "maximum": 0.0,
+        "maximumEnabled": false,
+        "softMaximum": 0.0,
+        "softMaximumEnabled": false,
+        "id": "fsIi9vmw",
+        "displayName": "No empty values exist in 5 columns",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": false,
+        "enabled": true
+      }
+    ],
     "displayedState": {
       "checks": []
     }
