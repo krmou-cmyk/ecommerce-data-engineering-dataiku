@@ -95,6 +95,7 @@
   "schema": {
     "columns": [
       {"name":"order_id","type":"string"},
+      {"name":"order_item_id","type":"bigint"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
