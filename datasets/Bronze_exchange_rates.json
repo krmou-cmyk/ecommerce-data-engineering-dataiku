@@ -198,6 +198,25 @@
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
+      },
+      {
+        "type": "ColumnMinInRangeRule",
+        "columns": [
+          "exchange_rate"
+        ],
+        "minimum": 0.0,
+        "minimumEnabled": false,
+        "maximum": 0.0,
+        "maximumEnabled": false,
+        "softMinimum": 0.0,
+        "softMinimumEnabled": false,
+        "softMaximum": 0.0,
+        "softMaximumEnabled": false,
+        "id": "XzJQ2tTQ",
+        "displayName": "Min of exchange_rate is in range",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": true,
+        "enabled": true
       }
     ],
     "displayedState": {
