@@ -4,35 +4,39 @@
     "list": [
       {
         "d": true,
-        "name": "order_id"
+        "name": "product_id"
       },
       {
         "d": true,
-        "name": "customer_id"
+        "name": "product_category_name"
       },
       {
         "d": true,
-        "name": "order_status"
+        "name": "product_name_lenght"
       },
       {
         "d": true,
-        "name": "order_purchase_timestamp"
+        "name": "product_description_lenght"
       },
       {
         "d": true,
-        "name": "order_approved_at"
+        "name": "product_photos_qty"
       },
       {
         "d": true,
-        "name": "order_delivered_carrier_date"
+        "name": "product_weight_g"
       },
       {
         "d": true,
-        "name": "order_delivered_customer_date"
+        "name": "product_length_cm"
       },
       {
         "d": true,
-        "name": "order_estimated_delivery_date"
+        "name": "product_height_cm"
+      },
+      {
+        "d": true,
+        "name": "product_width_cm"
       },
       {
         "d": true,
@@ -148,17 +152,26 @@
   "analysisColumnData": {},
   "flagNumericValues": true,
   "columnWidthsByName": {
+    "order_delivered_customer_date": 253,
+    "product_weight_g": 135,
+    "product_photos_qty": 150,
+    "product_width_cm": 135,
+    "order_approved_at": 169,
+    "product_name_lenght": 158,
+    "product_description_lenght": 210,
+    "product_length_cm": 143,
     "_source_system": 120,
     "order_status": 134,
-    "order_delivered_customer_date": 253,
+    "product_category_name": 225,
     "order_purchase_timestamp": 218,
     "_ingestion_timestamp": 190,
     "_batch_id": 120,
+    "product_height_cm": 143,
     "order_estimated_delivery_date": 253,
+    "product_id": 239,
     "customer_id": 239,
     "order_id": 239,
-    "order_delivered_carrier_date": 246,
-    "order_approved_at": 169
+    "order_delivered_carrier_date": 246
   },
   "sorting": [],
   "globalSearchQuery": "",
