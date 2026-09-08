@@ -85,14 +85,33 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "StringTransformer",
       "params": {
         "mode": "TRIM",
         "columns": [
-          "customer_city"
+          "customer_city",
+          "customer_id",
+          "customer_state",
+          "customer_unique_id",
+          "customer_zip_code_prefix"
+        ],
+        "appliesTo": "COLUMNS",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TO_UPPER",
+        "columns": [
+          "customer_state"
         ],
         "appliesTo": "SINGLE_COLUMN",
         "truncate_limit": 0
