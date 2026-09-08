@@ -187,7 +187,24 @@
   },
   "metricsChecks": {
     "monitor": false,
-    "checks": [],
+    "checks": [
+      {
+        "type": "ColumnUniqueValuesRule",
+        "columns": [
+          "product_id"
+        ],
+        "thresholdType": "ENTIRE_COLUMN",
+        "minimum": 0.0,
+        "minimumEnabled": false,
+        "softMinimum": 0.0,
+        "softMinimumEnabled": false,
+        "id": "TbFisDqd",
+        "displayName": "All values of product_id are unique",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": true,
+        "enabled": true
+      }
+    ],
     "displayedState": {
       "checks": []
     }
