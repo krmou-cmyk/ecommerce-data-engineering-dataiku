@@ -188,17 +188,17 @@
     "monitor": true,
     "checks": [
       {
-        "type": "ColumnEmptyRule",
+        "type": "ColumnNotEmptyRule",
         "columns": [
           "order_id"
         ],
-        "thresholdType": "ENTIRE_COLUMN_EMPTY",
-        "minimum": 0.0,
-        "minimumEnabled": false,
-        "softMinimum": 0.0,
-        "softMinimumEnabled": false,
+        "thresholdType": "ENTIRE_COLUMN_NOT_EMPTY",
+        "maximum": 0.0,
+        "maximumEnabled": false,
+        "softMaximum": 0.0,
+        "softMaximumEnabled": false,
         "id": "Zq0F1T9g",
-        "displayName": "All values of order_id are empty",
+        "displayName": "No empty values exist in order_id",
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
