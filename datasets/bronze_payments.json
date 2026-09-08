@@ -185,18 +185,21 @@
     "monitor": true,
     "checks": [
       {
-        "type": "ColumnNotEmptyRule",
+        "type": "ColumnMaxInRangeRule",
         "columns": [
-          "order_id",
-          "payment_sequential"
+          "payment_value",
+          "payment_installments"
         ],
-        "thresholdType": "ENTIRE_COLUMN_NOT_EMPTY",
+        "minimum": 1.0,
+        "minimumEnabled": true,
         "maximum": 0.0,
         "maximumEnabled": false,
+        "softMinimum": 0.0,
+        "softMinimumEnabled": false,
         "softMaximum": 0.0,
         "softMaximumEnabled": false,
         "id": "85Jop5fJ",
-        "displayName": "No empty values exist in 2 columns",
+        "displayName": "Max of 2 columns is above 1",
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
