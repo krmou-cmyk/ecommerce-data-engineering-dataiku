@@ -23,7 +23,7 @@
     "main": {
       "items": [
         {
-          "ref": "silver_order_items_by_order_id",
+          "ref": "silver_order_items_control_unicité",
           "appendMode": false
         }
       ]
