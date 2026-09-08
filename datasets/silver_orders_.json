@@ -221,6 +221,27 @@
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
+      },
+      {
+        "type": "ValuesInSetRule",
+        "columns": [
+          "order_status"
+        ],
+        "valueSet": [
+          "canceled",
+          "shipped",
+          "invoiced",
+          "unavailable",
+          "created",
+          "processing",
+          "delivered",
+          "approved"
+        ],
+        "id": "qpyJy2zz",
+        "displayName": "All values of order_status are in set",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": true,
+        "enabled": true
       }
     ],
     "displayedState": {
