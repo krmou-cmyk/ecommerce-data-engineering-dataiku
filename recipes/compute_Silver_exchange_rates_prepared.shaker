@@ -1,6 +1,36 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "rate_date"
+      },
+      {
+        "d": true,
+        "name": "base_currency"
+      },
+      {
+        "d": true,
+        "name": "target_currency"
+      },
+      {
+        "d": true,
+        "name": "exchange_rate"
+      },
+      {
+        "d": true,
+        "name": "_source_system"
+      },
+      {
+        "d": true,
+        "name": "_ingestion_timestamp"
+      },
+      {
+        "d": true,
+        "name": "_batch_id"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +60,27 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "date",
+            "to": "rate_date"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +108,16 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "date": 100,
+    "base_currency": 113,
+    "_source_system": 148,
+    "exchange_rate": 134,
+    "_ingestion_timestamp": 190,
+    "target_currency": 128,
+    "_batch_id": 120,
+    "rate_date": 113
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
