@@ -20,16 +20,15 @@
       "active": true,
       "params": {
         "repeatFrequency": 1,
-        "frequency": "Daily",
+        "frequency": "Minutely",
         "startingFrom": "2026-09-09",
         "daysOfWeek": [
           "Wednesday"
         ],
-        "monthlyRunOn": "ON_THE_DAY",
         "minute": 15,
         "hour": 15,
         "timezone": "SERVER",
-        "lastUpdate": 1788959701107
+        "lastUpdate": 1788959821928
       }
     }
   ],
