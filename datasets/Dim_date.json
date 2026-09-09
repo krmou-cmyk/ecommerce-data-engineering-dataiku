@@ -93,8 +93,17 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"date","type":"dateonly"},
+      {"name":"year","type":"int"},
+      {"name":"quarter","type":"int"},
+      {"name":"month","type":"int"},
+      {"name":"month_name","type":"string"},
+      {"name":"day","type":"int"},
+      {"name":"day_of_week","type":"string"},
+      {"name":"is_weekend","type":"boolean"}
+    ],
+    "userModified": false
   },
   "typeSystemVersion": "V2",
   "dkuProperties": [],
