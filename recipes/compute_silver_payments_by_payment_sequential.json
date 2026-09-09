@@ -23,7 +23,7 @@
     "main": {
       "items": [
         {
-          "ref": "silver_payments_by_payment_sequential",
+          "ref": "agg_payments_by_order",
           "appendMode": false
         }
       ]
