@@ -242,7 +242,7 @@
         "displayName": "All values of 2 columns are unique",
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
-        "enabled": true
+        "enabled": false
       }
     ],
     "displayedState": {
