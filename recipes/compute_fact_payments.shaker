@@ -1,6 +1,32 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "payment_sequential"
+      },
+      {
+        "d": true,
+        "name": "payment_type"
+      },
+      {
+        "d": true,
+        "name": "payment_installments"
+      },
+      {
+        "d": true,
+        "name": "payment_value_brl"
+      },
+      {
+        "d": true,
+        "name": "_dw_loaded_at"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +56,55 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "payment_value",
+            "to": "payment_value_brl"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "_source_system",
+          "_ingestion_timestamp",
+          "_batch_id"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "now()",
+        "column": "_dw_loaded_at",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +132,18 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "_source_system": 120,
+    "payment_type": 134,
+    "_ingestion_timestamp": 190,
+    "_dw_loaded_at": 183,
+    "payment_installments": 165,
+    "payment_value": 134,
+    "_batch_id": 120,
+    "payment_value_brl": 143,
+    "payment_sequential": 150,
+    "order_id": 239
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
