@@ -95,6 +95,9 @@
   "schema": {
     "columns": [
       {"name":"order_date","type":"dateonly"},
+      {"name":"order_id_distinct","type":"bigint"},
+      {"name":"total_payment_brl_avg","type":"double"},
+      {"name":"total_payment_brl_sum","type":"double"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
