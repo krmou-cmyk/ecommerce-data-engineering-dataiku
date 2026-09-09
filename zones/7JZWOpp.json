@@ -19,12 +19,60 @@
       "objectType": "DATASET"
     },
     {
+      "objectId": "Raw_products_dataset",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "bronze_customers",
+      "objectType": "DATASET"
+    },
+    {
       "objectId": "silver_orders",
       "objectType": "DATASET"
     },
     {
-      "objectId": "Raw_products_dataset",
+      "objectId": "bronze_order_items",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "bronze_orders",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "bronze_products",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "bronze_payments",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Bronze_exchange_rates",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_bronze_customers",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_bronze_order_items",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_raw_orders",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_raw_products",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_raw_products_1",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_Bronze_exchange_rates",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
