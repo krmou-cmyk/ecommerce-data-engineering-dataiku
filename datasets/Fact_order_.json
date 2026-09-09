@@ -102,11 +102,8 @@
       {"name":"order_delivered_carrier_date","type":"datetimenotz"},
       {"name":"order_delivered_customer_date","type":"datetimenotz"},
       {"name":"order_estimated_delivery_date","type":"datetimenotz"},
-      {"name":"_source_system","type":"string"},
-      {"name":"_ingestion_timestamp","type":"date"},
-      {"name":"_batch_id","type":"string"},
-      {"name":"payment_value_sum","type":"double"},
-      {"name":"count","type":"bigint"}
+      {"name":"total_payment_brl","type":"double"},
+      {"name":"_dw_loaded_at","type":"date"}
     ],
     "userModified": true
   },
