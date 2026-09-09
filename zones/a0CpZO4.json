@@ -1,7 +1,132 @@
 {
   "name": "silver",
   "color": "#4B8021",
-  "items": [],
+  "items": [
+    {
+      "objectId": "silver_products",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_orders_",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_payments",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Silver_exchange_rates",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Silver_exchange_rates_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "agg_payments_by_order",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "exchange_rates_daily",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_payments_unicite_check",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_payments_order_joined",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_order_items_product_joined",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_customers_joined",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_order_items_jd",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_order_items_control_unicité",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_order_items",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_customers",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_orders",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_silver_products",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_orders_",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_payments",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_Silver_exchange_rates",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_Silver_exchange_rates_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_payments_by_payment_sequential",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_exchange_rates_daily",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_payments_unicite_check",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_payments_order_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_order_items_product_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_customers_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_order_items_jd",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_order_items_by_order_id",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_order_items",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_customers",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
