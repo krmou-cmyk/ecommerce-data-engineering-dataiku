@@ -106,18 +106,6 @@
         "lang": "auto"
       },
       "alwaysShowComment": false
-    },
-    {
-      "preview": true,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "CreateColumnWithGREL",
-      "params": {
-        "expression": "getVariable(\"batch_id\")",
-        "column": "_batch_id",
-        "errorColumn": ""
-      },
-      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
