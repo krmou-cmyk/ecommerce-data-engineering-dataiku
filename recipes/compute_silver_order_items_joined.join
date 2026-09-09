@@ -3,71 +3,100 @@
     {
       "table2": 1,
       "table1": 0,
-      "conditionsMode": "AND",
+      "conditionsMode": "CUSTOM",
       "type": "LEFT",
+      "customSQLCondition": "silver_orders\nLEFT JOIN silver_customers\nON orders.customer_id \u003d customers.customer_id",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "order_id",
+            "table": 0
+          },
+          "dateDiffUnit": "SECOND",
+          "column2": {
+            "name": "customer_id",
+            "table": 1
+          },
+          "type": "EQ"
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "order_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "order_item_id",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "product_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "seller_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "shipping_limit_date",
+      "type": "datetimenotz",
       "table": 0
     },
     {
       "name": "price",
+      "type": "double",
       "table": 0
     },
     {
       "name": "freight_value",
+      "type": "double",
       "table": 0
     },
     {
       "name": "_source_system",
+      "type": "string",
       "table": 0
     },
     {
       "name": "_ingestion_timestamp",
+      "type": "date",
       "table": 0
     },
     {
       "name": "_batch_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "customer_id",
+      "type": "string",
       "table": 1
     },
     {
       "name": "customer_unique_id",
+      "type": "string",
       "table": 1
     },
     {
       "name": "customer_zip_code_prefix",
+      "type": "string",
       "table": 1
     },
     {
       "name": "customer_city",
+      "type": "string",
       "table": 1
     },
     {
       "name": "customer_state",
+      "type": "string",
       "table": 1
     }
   ],
@@ -135,5 +164,75 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "order_id",
+            "type": "string"
+          },
+          {
+            "name": "order_item_id",
+            "type": "bigint"
+          },
+          {
+            "name": "product_id",
+            "type": "string"
+          },
+          {
+            "name": "seller_id",
+            "type": "string"
+          },
+          {
+            "name": "shipping_limit_date",
+            "type": "datetimenotz"
+          },
+          {
+            "name": "price",
+            "type": "double"
+          },
+          {
+            "name": "freight_value",
+            "type": "double"
+          },
+          {
+            "name": "_source_system",
+            "type": "string"
+          },
+          {
+            "name": "_ingestion_timestamp",
+            "type": "date"
+          },
+          {
+            "name": "_batch_id",
+            "type": "string"
+          },
+          {
+            "name": "customer_id",
+            "type": "string"
+          },
+          {
+            "name": "customer_unique_id",
+            "type": "string"
+          },
+          {
+            "name": "customer_zip_code_prefix",
+            "type": "string"
+          },
+          {
+            "name": "customer_city",
+            "type": "string"
+          },
+          {
+            "name": "customer_state",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
