@@ -1,6 +1,32 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "customer_id"
+      },
+      {
+        "d": true,
+        "name": "customer_unique_id"
+      },
+      {
+        "d": true,
+        "name": "customer_zip_code_prefix"
+      },
+      {
+        "d": true,
+        "name": "customer_city"
+      },
+      {
+        "d": true,
+        "name": "customer_state"
+      },
+      {
+        "d": true,
+        "name": "_dw_loaded_at"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +56,40 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "_batch_id",
+          "_ingestion_timestamp",
+          "_source_system"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": " now()",
+        "column": "_dw_loaded_at",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +117,17 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "_source_system": 120,
+    "customer_unique_id": 239,
+    "customer_state": 120,
+    "_ingestion_timestamp": 190,
+    "_dw_loaded_at": 183,
+    "_batch_id": 120,
+    "customer_id": 239,
+    "customer_zip_code_prefix": 195,
+    "customer_city": 148
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
