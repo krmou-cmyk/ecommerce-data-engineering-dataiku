@@ -20,6 +20,10 @@
       },
       {
         "d": true,
+        "name": "order_date"
+      },
+      {
+        "d": true,
         "name": "order_approved_at"
       },
       {
@@ -121,6 +125,20 @@
         ]
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateFormatter",
+      "params": {
+        "inCol": "order_purchase_timestamp",
+        "outCol": "order_date",
+        "format": "yyyy-MM-dd",
+        "timezone_id": "UTC",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -157,11 +175,15 @@
     "order_approved_at": 169,
     "_source_system": 120,
     "order_status": 134,
+    "order_date": 100,
     "order_purchase_timestamp": 218,
     "_ingestion_timestamp": 190,
     "_dw_loaded_at": 183,
     "_batch_id": 120,
     "order_estimated_delivery_date": 253,
+    "order_purchase_timestamp_month": 240,
+    "order_purchase_timestamp_day": 225,
+    "order_purchase_timestamp_year": 233,
     "customer_id": 239,
     "total_payment_brl": 143,
     "order_id": 239,
