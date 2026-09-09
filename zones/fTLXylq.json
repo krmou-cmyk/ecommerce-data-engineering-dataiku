@@ -1,7 +1,64 @@
 {
   "name": "DATA_QUALITY",
   "color": "#C82423",
-  "items": [],
+  "items": [
+    {
+      "objectId": "silver_payments_unicite_check",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "agg_payments_by_order",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_payments_order_joined",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_customers_joined",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_order_items_jd",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_order_items_control_unicité",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "silver_order_items_product_joined",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_silver_payments_unicite_check",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_payments_by_payment_sequential",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_payments_order_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_customers_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_order_items_jd",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_order_items_by_order_id",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_silver_order_items_product_joined",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
