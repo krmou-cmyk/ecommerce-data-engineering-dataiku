@@ -30,5 +30,5 @@ df["day_of_week"] = df["date"].dt.day_name()
 df["is_weekend"] = df["date"].dt.dayofweek >= 5
 
 # Ecrire dans Dataiku
-output_dataset = dataiku.Dataset("dim_date")
+output_dataset = dataiku.Dataset("Dim_date")
 output_dataset.write_with_schema(df)
