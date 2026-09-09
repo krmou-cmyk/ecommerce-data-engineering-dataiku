@@ -67,7 +67,7 @@
     "main": {
       "items": [
         {
-          "ref": "fact_order_items_prepared",
+          "ref": "fact_order_item",
           "appendMode": false
         }
       ]
