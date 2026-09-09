@@ -104,7 +104,7 @@
       {"name":"day_of_week","type":"string"},
       {"name":"is_weekend","type":"boolean"}
     ],
-    "userModified": true
+    "userModified": false
   },
   "typeSystemVersion": "V2",
   "dkuProperties": [],
