@@ -6,68 +6,103 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "customer_id",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "customer_id",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "customer_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "customer_unique_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "customer_zip_code_prefix",
+      "type": "string",
       "table": 0
     },
     {
       "name": "customer_city",
+      "type": "string",
       "table": 0
     },
     {
       "name": "customer_state",
+      "type": "string",
       "table": 0
     },
     {
       "name": "_source_system",
+      "type": "string",
       "table": 0
     },
     {
       "name": "_ingestion_timestamp",
+      "type": "date",
       "table": 0
     },
     {
       "name": "_batch_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "order_id",
+      "type": "string",
       "table": 1
     },
     {
       "name": "order_status",
+      "type": "string",
       "table": 1
     },
     {
       "name": "order_purchase_timestamp",
+      "type": "datetimenotz",
       "table": 1
     },
     {
       "name": "order_approved_at",
+      "type": "datetimenotz",
       "table": 1
     },
     {
       "name": "order_delivered_carrier_date",
+      "type": "datetimenotz",
       "table": 1
     },
     {
       "name": "order_delivered_customer_date",
+      "type": "datetimenotz",
       "table": 1
     },
     {
       "name": "order_estimated_delivery_date",
+      "type": "datetimenotz",
       "table": 1
     }
   ],
@@ -135,5 +170,75 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "customer_id",
+            "type": "string"
+          },
+          {
+            "name": "customer_unique_id",
+            "type": "string"
+          },
+          {
+            "name": "customer_zip_code_prefix",
+            "type": "string"
+          },
+          {
+            "name": "customer_city",
+            "type": "string"
+          },
+          {
+            "name": "customer_state",
+            "type": "string"
+          },
+          {
+            "name": "_source_system",
+            "type": "string"
+          },
+          {
+            "name": "_ingestion_timestamp",
+            "type": "date"
+          },
+          {
+            "name": "_batch_id",
+            "type": "string"
+          },
+          {
+            "name": "order_id",
+            "type": "string"
+          },
+          {
+            "name": "order_status",
+            "type": "string"
+          },
+          {
+            "name": "order_purchase_timestamp",
+            "type": "datetimenotz"
+          },
+          {
+            "name": "order_approved_at",
+            "type": "datetimenotz"
+          },
+          {
+            "name": "order_delivered_carrier_date",
+            "type": "datetimenotz"
+          },
+          {
+            "name": "order_delivered_customer_date",
+            "type": "datetimenotz"
+          },
+          {
+            "name": "order_estimated_delivery_date",
+            "type": "datetimenotz"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
