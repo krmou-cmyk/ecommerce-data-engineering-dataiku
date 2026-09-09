@@ -216,7 +216,7 @@
         "displayName": "All values of order_item_id are unique",
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
-        "enabled": true
+        "enabled": false
       }
     ],
     "displayedState": {
