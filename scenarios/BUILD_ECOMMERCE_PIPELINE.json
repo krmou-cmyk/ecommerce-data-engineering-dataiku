@@ -16,6 +16,29 @@
   "params": {
     "steps": [
       {
+        "id": "custom_python_meUqm9bPNW77oaXbUvIvSQ",
+        "type": "custom_python",
+        "name": "SET_BATCH_ID",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "script": "import dataiku\nfrom datetime import datetime, timezone\n\n# Générer un batch_id unique pour ce run\nbatch_id \u003d datetime.now(timezone.utc).strftime(\"%Y%m%d_%H%M%S\")\n\n# Récupérer les variables du projet\nclient \u003d dataiku.api_client()\nproject \u003d client.get_default_project()\n\nvariables \u003d project.get_variables()\n\n# Enregistrer le batch_id\nvariables[\"standard\"][\"batch_id\"] \u003d batch_id\n\nproject.set_variables(variables)\n\nprint(\"batch_id \u003d\", batch_id)",
+          "envSelection": {
+            "envMode": "INHERIT"
+          },
+          "proceedOnFailure": false
+        }
+      },
+      {
         "id": "build_0_true_d_dim_customers_d_Dim_date_d_fact_payments_d_daily_sales_kpis_d_fact_order_item",
         "type": "build_flowitem",
         "name": "Step #2",
@@ -63,29 +86,6 @@
           "stopAtFlowZoneBoundary": false,
           "refreshHiveMetastore": true,
           "handleWarningsAs": "WARNING",
-          "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "custom_python_meUqm9bPNW77oaXbUvIvSQ",
-        "type": "custom_python",
-        "name": "Step #2",
-        "enabled": true,
-        "alwaysShowComment": false,
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "delayBetweenRetries": 10,
-        "maxRetriesOnFail": 0,
-        "params": {
-          "script": "import dataiku\nfrom datetime import datetime, timezone\n\n# Générer un batch_id unique pour ce run\nbatch_id \u003d datetime.now(timezone.utc).strftime(\"%Y%m%d_%H%M%S\")\n\n# Récupérer les variables du projet\nclient \u003d dataiku.api_client()\nproject \u003d client.get_default_project()\n\nvariables \u003d project.get_variables()\n\n# Enregistrer le batch_id\nvariables[\"standard\"][\"batch_id\"] \u003d batch_id\n\nproject.set_variables(variables)\n\nprint(\"batch_id \u003d\", batch_id)",
-          "envSelection": {
-            "envMode": "INHERIT"
-          },
           "proceedOnFailure": false
         }
       }
