@@ -70,6 +70,57 @@
           "handleWarningsAs": "WARNING",
           "proceedOnFailure": false
         }
+      },
+      {
+        "id": "build_0_true_d_dim_customers_d_Dim_date_d_fact_payments_d_daily_sales_kpis_d_fact_order_item",
+        "type": "build_flowitem",
+        "name": "Step #2",
+        "enabled": true,
+        "alwaysShowComment": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "dim_customers",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "Dim_date",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "fact_payments",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "daily_sales_kpis",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "fact_order_item",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "autoUpdateSchemaBeforeEachRecipeRun": false,
+          "stopAtFlowZoneBoundary": false,
+          "refreshHiveMetastore": true,
+          "handleWarningsAs": "WARNING",
+          "proceedOnFailure": false
+        }
       }
     ]
   },
