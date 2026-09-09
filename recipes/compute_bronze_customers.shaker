@@ -113,7 +113,7 @@
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "${batch_id}",
+        "expression": "getVariable(\"batch_id\")",
         "column": "_batch_id",
         "errorColumn": ""
       },
