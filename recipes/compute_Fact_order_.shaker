@@ -1,6 +1,48 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "customer_id"
+      },
+      {
+        "d": true,
+        "name": "order_status"
+      },
+      {
+        "d": true,
+        "name": "order_purchase_timestamp"
+      },
+      {
+        "d": true,
+        "name": "order_approved_at"
+      },
+      {
+        "d": true,
+        "name": "order_delivered_carrier_date"
+      },
+      {
+        "d": true,
+        "name": "order_delivered_customer_date"
+      },
+      {
+        "d": true,
+        "name": "order_estimated_delivery_date"
+      },
+      {
+        "d": true,
+        "name": "total_payment_brl"
+      },
+      {
+        "d": true,
+        "name": "_dw_loaded_at"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +72,57 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "_source_system",
+          "_ingestion_timestamp",
+          "_batch_id",
+          "count",
+          "count"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "now()",
+        "column": "_dw_loaded_at",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "payment_value_sum",
+            "to": "total_payment_brl"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +150,23 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "payment_value_sum": 143,
+    "order_delivered_customer_date": 253,
+    "count": 100,
+    "order_approved_at": 169,
+    "_source_system": 120,
+    "order_status": 134,
+    "order_purchase_timestamp": 218,
+    "_ingestion_timestamp": 190,
+    "_dw_loaded_at": 183,
+    "_batch_id": 120,
+    "order_estimated_delivery_date": 253,
+    "customer_id": 239,
+    "total_payment_brl": 143,
+    "order_id": 239,
+    "order_delivered_carrier_date": 246
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
