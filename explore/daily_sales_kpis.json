@@ -78,14 +78,101 @@
         "id": "38795b92",
         "type": "grouped_columns",
         "variant": "normal",
-        "name": "Nouveau graphique",
+        "name": "order_id_distinct by total_payment_eur_sum",
         "userEditedName": false,
         "displayWithEChartsByDefault": true,
-        "genericDimension0": [],
+        "genericDimension0": [
+          {
+            "numParams": {
+              "mode": "FIXED_NB",
+              "emptyBinsMode": "ZEROS",
+              "binSize": 100.0,
+              "niceBounds": false,
+              "customBinValues": [],
+              "nbBins": 10
+            },
+            "maxValues": 100,
+            "generateOthersCategory": true,
+            "forceLastPositionOthers": false,
+            "oneTickPerBin": "AUTO",
+            "filters": [],
+            "isA": "dimension",
+            "sort": {
+              "type": "NATURAL",
+              "sortId": "NATURAL",
+              "label": "Ordonnancement naturel",
+              "sortAscending": true
+            },
+            "multiplier": "Auto",
+            "hideTrailingZeros": true,
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "useLastValueAsTotal": false,
+            "column": "total_payment_eur_sum",
+            "type": "NUMERICAL"
+          }
+        ],
         "genericDimension1": [],
         "facetDimension": [],
         "animationDimension": [],
-        "genericMeasures": [],
+        "genericMeasures": [
+          {
+            "column": "order_id_distinct",
+            "function": "AVG",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "isUnaggregated": true,
+            "uaComputeMode": "KEEP_FIRST",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "multiplier": "Auto",
+            "digitGrouping": "DEFAULT",
+            "useParenthesesForNegativeValues": false,
+            "shouldFormatInPercentage": false,
+            "hideTrailingZeros": true,
+            "prefix": "",
+            "suffix": "",
+            "showValue": true,
+            "showDisplayLabel": true,
+            "labelPosition": "BOTTOM",
+            "percentile": 50.0,
+            "isCustomPercentile": false,
+            "kpiTextAlign": "CENTER",
+            "kpiValueFontSizeMode": "RESPONSIVE",
+            "kpiValueFontSize": 32,
+            "responsiveTextAreaFill": 100,
+            "valueTextFormatting": {
+              "fontSize": 11,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "labelTextFormatting": {
+              "fontSize": 15,
+              "fontColor": "#333333",
+              "hasBackground": false,
+              "fontFamily": "SourceSansPro"
+            },
+            "valuesInChartDisplayOptions": {
+              "displayValues": true,
+              "textFormatting": {
+                "fontSize": 11,
+                "fontColor": "AUTO",
+                "hasBackground": false,
+                "backgroundColor": "#D9D9D9BF"
+              },
+              "addDetails": false,
+              "additionalMeasures": [],
+              "placementMode": "AUTO",
+              "spacing": 2
+            },
+            "colorRules": []
+          }
+        ],
         "genericHierarchyDimension": [],
         "yHierarchyDimension": [],
         "xHierarchyDimension": [],
@@ -135,6 +222,7 @@
         "tooltipMeasures": [],
         "boxplotBreakdownDim": [],
         "boxplotValue": [],
+        "filters": [],
         "xAxisFormatting": {
           "displayAxis": true,
           "displayLineAndTicks": true,
@@ -297,7 +385,7 @@
         "valuesInChartDisplayOptions": {
           "displayValues": false,
           "displayPieLabelsOrValues": true,
-          "displayMode": "LABELS",
+          "displayMode": "VALUES",
           "overlappingStrategy": "AUTO",
           "textFormatting": {
             "fontSize": 11,
@@ -310,11 +398,13 @@
           "totalsInChartDisplayOptions": {
             "textFormatting": {
               "fontSize": 11,
-              "fontColor": "#333",
-              "hasBackground": false
+              "fontColor": "AUTO",
+              "hasBackground": false,
+              "backgroundColor": "#D9D9D9BF"
             },
             "addDetails": false,
             "placementMode": "AUTO",
+            "spacing": 5,
             "additionalMeasures": []
           }
         },
@@ -342,8 +432,11 @@
             "values": [],
             "fixedValues": false
           },
-          "customColors": {}
+          "customColors": {
+            "m_order_id_distinct_AVG_1": "#1f77b4"
+          }
         },
+        "colorGroups": [],
         "bubblesOptions": {
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
@@ -444,8 +537,8 @@
           "lockSquareGrid": false
         },
         "mapGridOptions": {
-          "gridLonDeg": 0.6,
-          "gridLatDeg": 0.6
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
         },
         "radarOptions": {
           "filled": false,
@@ -511,6 +604,7 @@
           },
           "displayPointer": false
         },
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAADk0lEQVR4Xu3cUWhTdxTH8XP+N1WXrZUOl0KaRCibjAkDYT4K6xjIMjMoTB/GHnSwiU/S2Vj2ZPc2K6IoDNanTrY9DMZoG2dlg+1RfJANQZENGTZN7bKtzlptknv/Z0STvxdvBfEp9/D7vLSc3MLt/fbfm/5pwgSqservDhBYO6xg5RBYOQRWDoGVQ2DlEFg5BFYOgZVDYOUQOEb6hksDCTYpskGkm8+8uLhUrdDkvlU3JGxVxkp2tDTCJG8xsXn0xAORH6hB35RPFObdEIHjBYGVQ2DlEFg5BFYOgZVDYOUQWDkEVg6BlUNg5RBYOQRWDoGVQ2DlEFg5BFYOgZVDYOUQWDkEDtl4oNSbTHJPlxXPDVt87mrQnfo/lYnCXTeMAQQOyYyU3jcevUNCPW740E1L8nl5vHDRTWIAgUOyxbN7mWWIORrYCi1YMqfmx/MX3DAG9AceGzOZ/15ZX6u9EPm121RNVes0tqdBRILAD0T+Q76TpQ/NbEqQ3WbJpNY8T05cLtfkGp3O1xC4dUlaH2MhNzq7lTj4iEVeXeuEg4C+uuM3vrt1cugWAj+AwDGi/h6MFaz8tUkIjMC4B8f51YVYwVjBWMGduIIzw7PPB2alm2hD5Dmtb6hWXeWl5t+2WMExXcG5kZkPyfCbQpRwZVuY6HcKzJkbx/NXELiTAu/+dl3vQO8zSbMcidY0v9C7QpOD999PIlecOUjMbzNTV/vxkKs+yRfzRwu/IXAHBc4UZ15i4h3M0udShQiZH+cuJn+lXwZ9BH4yHbXRkT00vZ2N9y4xbXZnGGKD4MvycvonmnitkS2WPmCmN5qbye6AFjHyh2/p64XxXVf7Pzm7xRN6jyy97A4IEbHfr6x65/49nb/dXyztNkw7mfg5d0Aby1++lcnKscIlN4uB3Oj0fiHzOgtHdiADpp/rdmWqemzPTTd8uq1KYaJPH/N1R6R59ZqfNZ84SSLICfGz7UfD6g1z/e+TFxaJxmxuuDQQeF6fsETePcYXXvZr8mcz2qbDU92e9TZ7bDa6A8LqwVzlXmWBJvY30h+fzxrjpy2v8UPj2dUuous3Ptu15IYxkBmeetGu81JkTeT6N3yzWF1aX27f9toiB4IuCKwcAiuHwMohsHIIrBwCK4fAyiGwcgisHAIrh8DKIbByCKwcAiuHwMohsHIIrBwCK4fAyiGwcgisHAIrh8DKIbByCKwcAiuHwMr9DwuYl37svLguAAAAEGRlQkcwQUZGMUU4NDdBQUVGNTBDavkymgAAAABJRU5ErkJggg\u003d\u003d",
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
         "legendFormatting": {
@@ -597,8 +691,10 @@
             }
           },
           "horizontal": {
-            "show": false,
-            "displayAxis": {},
+            "show": true,
+            "displayAxis": {
+              "type": "LEFT_Y_AXIS"
+            },
             "lineFormatting": {
               "type": "FILLED",
               "color": "#d9d9d9",
