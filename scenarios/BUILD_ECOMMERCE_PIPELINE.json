@@ -1,0 +1,30 @@
+{
+  "type": "step_based",
+  "name": "BUILD_ECOMMERCE_PIPELINE",
+  "active": false,
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "krm.oussaidi@gmail.com"
+    },
+    "lastModifiedOn": 1788955870743
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [],
+  "reporters": [],
+  "params": {
+    "steps": []
+  },
+  "automationLocal": false,
+  "customFields": {},
+  "markedAsTest": false,
+  "__dku_object_version__": 1
+}
