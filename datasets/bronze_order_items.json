@@ -205,7 +205,7 @@
       {
         "type": "ColumnUniqueValuesRule",
         "columns": [
-          "order_id"
+          "order_item_id"
         ],
         "thresholdType": "ENTIRE_COLUMN",
         "minimum": 0.0,
@@ -213,7 +213,7 @@
         "softMinimum": 0.0,
         "softMinimumEnabled": false,
         "id": "iXGszqhQ",
-        "displayName": "All values of order_id are unique",
+        "displayName": "All values of order_item_id are unique",
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
