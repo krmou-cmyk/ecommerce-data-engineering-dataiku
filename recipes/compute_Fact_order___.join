@@ -6,68 +6,96 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "order_id",
+            "table": 0
+          },
+          "dateDiffUnit": "SECOND",
+          "column2": {
+            "name": "rate_date",
+            "table": 1
+          },
+          "type": "EQ"
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "order_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "customer_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "order_status",
+      "type": "string",
       "table": 0
     },
     {
       "name": "order_purchase_timestamp",
+      "type": "datetimenotz",
       "table": 0
     },
     {
       "name": "order_date",
+      "type": "dateonly",
       "table": 0
     },
     {
       "name": "order_approved_at",
+      "type": "datetimenotz",
       "table": 0
     },
     {
       "name": "order_delivered_carrier_date",
+      "type": "datetimenotz",
       "table": 0
     },
     {
       "name": "order_delivered_customer_date",
+      "type": "datetimenotz",
       "table": 0
     },
     {
       "name": "order_estimated_delivery_date",
+      "type": "datetimenotz",
       "table": 0
     },
     {
       "name": "total_payment_brl",
+      "type": "double",
       "table": 0
     },
     {
       "name": "_dw_loaded_at",
+      "type": "date",
       "table": 0
     },
     {
       "name": "rate_date",
+      "type": "dateonly",
       "table": 1
     },
     {
       "name": "base_currency",
+      "type": "string",
       "table": 1
     },
     {
       "name": "target_currency",
+      "type": "string",
       "table": 1
     },
     {
       "name": "exchange_rate",
+      "type": "double",
       "table": 1
     }
   ],
@@ -135,5 +163,6 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
   "enableAutoCastInJoinConditions": false
 }
