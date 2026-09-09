@@ -95,6 +95,7 @@
   "schema": {
     "columns": [
       {"name":"order_id","type":"string"},
+      {"name":"payment_value_sum","type":"double"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
