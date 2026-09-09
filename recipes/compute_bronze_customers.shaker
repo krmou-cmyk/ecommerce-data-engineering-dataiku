@@ -94,16 +94,14 @@
       "alwaysShowComment": false
     },
     {
-      "preview": false,
+      "preview": true,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "DateFormatter",
+      "type": "CreateColumnWithGREL",
       "params": {
-        "inCol": "_ingestion_timestamp",
-        "outCol": "_batch_id",
-        "format": "yyyyMMdd_HHmmss",
-        "timezone_id": "UTC",
-        "lang": "auto"
+        "expression": "\"${batch_id}\"",
+        "column": "_batch_id",
+        "errorColumn": ""
       },
       "alwaysShowComment": false
     }
