@@ -99,9 +99,7 @@
       {"name":"customer_zip_code_prefix","type":"string"},
       {"name":"customer_city","type":"string"},
       {"name":"customer_state","type":"string"},
-      {"name":"_source_system","type":"string"},
-      {"name":"_ingestion_timestamp","type":"date"},
-      {"name":"_batch_id","type":"string"}
+      {"name":"_dw_loaded_at","type":"date"}
     ],
     "userModified": true
   },
