@@ -103,9 +103,7 @@
       {"name":"product_length_cm","type":"bigint"},
       {"name":"product_height_cm","type":"bigint"},
       {"name":"product_width_cm","type":"bigint"},
-      {"name":"_source_system","type":"string"},
-      {"name":"_ingestion_timestamp","type":"date"},
-      {"name":"_batch_id","type":"string"}
+      {"name":"_dw_loaded_at","type":"date"}
     ],
     "userModified": true
   },
