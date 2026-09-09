@@ -5,19 +5,7 @@
   },
   "keys": [
     {
-      "last": false,
-      "max": false,
-      "column": "order_date",
-      "count": false,
-      "sum": false,
-      "concat": false,
-      "type": "dateonly",
-      "countDistinct": false,
-      "min": false,
-      "avg": false,
-      "median": false,
-      "stddev": false,
-      "first": false
+      "column": "order_date"
     }
   ],
   "values": [
@@ -27,7 +15,6 @@
       "firstLastNotNull": false,
       "column": "order_id",
       "count": false,
-      "$idx": 0,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -37,7 +24,6 @@
       "countDistinct": true,
       "avg": false,
       "median": false,
-      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -47,7 +33,6 @@
       "firstLastNotNull": false,
       "column": "customer_id",
       "count": false,
-      "$idx": 1,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -66,7 +51,6 @@
       "firstLastNotNull": false,
       "column": "order_status",
       "count": false,
-      "$idx": 2,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -85,7 +69,6 @@
       "firstLastNotNull": false,
       "column": "order_purchase_timestamp",
       "count": false,
-      "$idx": 3,
       "sum": false,
       "concat": false,
       "type": "datetimenotz",
@@ -104,7 +87,6 @@
       "firstLastNotNull": false,
       "column": "order_approved_at",
       "count": false,
-      "$idx": 4,
       "sum": false,
       "concat": false,
       "type": "datetimenotz",
@@ -123,7 +105,6 @@
       "firstLastNotNull": false,
       "column": "order_delivered_carrier_date",
       "count": false,
-      "$idx": 5,
       "sum": false,
       "concat": false,
       "type": "datetimenotz",
@@ -142,7 +123,6 @@
       "firstLastNotNull": false,
       "column": "order_delivered_customer_date",
       "count": false,
-      "$idx": 6,
       "sum": false,
       "concat": false,
       "type": "datetimenotz",
@@ -161,7 +141,6 @@
       "firstLastNotNull": false,
       "column": "order_estimated_delivery_date",
       "count": false,
-      "$idx": 7,
       "sum": false,
       "concat": false,
       "type": "datetimenotz",
@@ -180,7 +159,6 @@
       "firstLastNotNull": false,
       "column": "total_payment_brl",
       "count": false,
-      "$idx": 8,
       "sum": true,
       "concat": false,
       "type": "double",
@@ -190,7 +168,6 @@
       "countDistinct": false,
       "avg": true,
       "median": false,
-      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -200,7 +177,6 @@
       "firstLastNotNull": false,
       "column": "_dw_loaded_at",
       "count": false,
-      "$idx": 9,
       "sum": false,
       "concat": false,
       "type": "date",
@@ -219,7 +195,6 @@
       "firstLastNotNull": false,
       "column": "rate_date",
       "count": false,
-      "$idx": 10,
       "sum": false,
       "concat": false,
       "type": "dateonly",
@@ -238,7 +213,6 @@
       "firstLastNotNull": false,
       "column": "base_currency",
       "count": false,
-      "$idx": 11,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -257,7 +231,6 @@
       "firstLastNotNull": false,
       "column": "target_currency",
       "count": false,
-      "$idx": 12,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -276,7 +249,6 @@
       "firstLastNotNull": false,
       "column": "exchange_rate",
       "count": false,
-      "$idx": 13,
       "sum": false,
       "concat": false,
       "type": "double",
@@ -336,33 +308,6 @@
   "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
-    "$status": {
-      "schema": {
-        "columns": [
-          {
-            "name": "order_date",
-            "type": "dateonly"
-          },
-          {
-            "name": "order_id_distinct",
-            "type": "bigint"
-          },
-          {
-            "name": "total_payment_brl_avg",
-            "type": "double"
-          },
-          {
-            "name": "total_payment_brl_sum",
-            "type": "double"
-          },
-          {
-            "name": "count",
-            "type": "bigint"
-          }
-        ],
-        "userModified": false
-      }
-    },
     "distinct": false,
     "enabled": false
   },

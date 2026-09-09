@@ -23,7 +23,7 @@
     "main": {
       "items": [
         {
-          "ref": "Fact_order____by_order_date",
+          "ref": "daily_sales_kpis",
           "appendMode": false
         }
       ]
