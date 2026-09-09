@@ -104,7 +104,7 @@
       {"name":"order_estimated_delivery_date","type":"datetimenotz"},
       {"name":"_source_system","type":"string"},
       {"name":"_ingestion_timestamp","type":"date"},
-      {"name":"_batch_id","type":"string"}
+      {"name":"batch_id","type":"string"}
     ],
     "userModified": true
   },
