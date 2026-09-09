@@ -201,6 +201,22 @@
         "computeOnBuildMode": "PARTITION",
         "autoRun": true,
         "enabled": true
+      },
+      {
+        "type": "ColumnUniqueValuesRule",
+        "columns": [
+          "product_id"
+        ],
+        "thresholdType": "ENTIRE_COLUMN",
+        "minimum": 0.0,
+        "minimumEnabled": false,
+        "softMinimum": 0.0,
+        "softMinimumEnabled": false,
+        "id": "n9z16QTD",
+        "displayName": "All values of product_id are unique",
+        "computeOnBuildMode": "PARTITION",
+        "autoRun": true,
+        "enabled": true
       }
     ],
     "displayedState": {
