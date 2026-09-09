@@ -3,7 +3,12 @@
   "color": "#D1D8DA",
   "items": [],
   "shared": [],
-  "position": {},
+  "position": {
+    "x": 2897.0,
+    "y": -1356.0,
+    "width": 1522.0,
+    "height": 1116.0
+  },
   "tags": [],
   "customFields": {},
   "checklists": {

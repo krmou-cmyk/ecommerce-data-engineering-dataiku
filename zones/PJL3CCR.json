@@ -32,7 +32,12 @@
     }
   ],
   "shared": [],
-  "position": {},
+  "position": {
+    "x": 16.0,
+    "y": -1103.0,
+    "width": 604.0,
+    "height": 610.0
+  },
   "tags": [],
   "customFields": {},
   "checklists": {

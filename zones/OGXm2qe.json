@@ -52,7 +52,12 @@
     }
   ],
   "shared": [],
-  "position": {},
+  "position": {
+    "x": 771.0,
+    "y": -1282.0,
+    "width": 462.0,
+    "height": 968.0
+  },
   "tags": [],
   "customFields": {},
   "checklists": {
