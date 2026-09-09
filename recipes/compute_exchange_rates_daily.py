@@ -2,7 +2,7 @@ import dataiku
 import pandas as pd
 
 # Lire les taux Silver
-input_dataset = dataiku.Dataset("silver_exchange_rates_prepared")
+input_dataset = dataiku.Dataset("Silver_exchange_rates_prepared")
 df = input_dataset.get_dataframe()
 
 # S'assurer que rate_date est bien une date
