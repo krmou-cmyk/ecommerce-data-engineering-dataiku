@@ -108,7 +108,8 @@
       {"name":"rate_date","type":"dateonly"},
       {"name":"base_currency","type":"string"},
       {"name":"target_currency","type":"string"},
-      {"name":"exchange_rate","type":"double"}
+      {"name":"exchange_rate","type":"double"},
+      {"name":"total_payment_eur","type":"double"}
     ],
     "userModified": true
   },
