@@ -31,7 +31,38 @@
         "delayBetweenRetries": 10,
         "maxRetriesOnFail": 0,
         "params": {
-          "builds": [],
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "Rawo_order_payments",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "raw_exchange_rates",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "Raw_customers_dataset",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "Raw_products_dataset",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "Raw_orders_dataset",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "Raw_order_items_dataset",
+              "partitionsSpec": ""
+            }
+          ],
           "jobType": "RECURSIVE_BUILD",
           "autoUpdateSchemaBeforeEachRecipeRun": false,
           "stopAtFlowZoneBoundary": false,
