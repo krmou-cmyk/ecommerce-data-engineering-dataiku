@@ -1,0 +1,45 @@
+{
+  "type": "grouping",
+  "neverRecomputeExistingPartitions": false,
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "hashPropagationBehavior": "INHERIT",
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "silver_payments",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "silver_payments_by_payment_sequential",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "krm.oussaidi@gmail.com"
+    },
+    "lastModifiedOn": 1788944327560
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
