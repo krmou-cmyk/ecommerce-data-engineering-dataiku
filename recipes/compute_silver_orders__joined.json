@@ -27,7 +27,7 @@
     "main": {
       "items": [
         {
-          "ref": "silver_orders__joined",
+          "ref": "Fact_order",
           "appendMode": false
         }
       ]
