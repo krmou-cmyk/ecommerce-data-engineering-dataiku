@@ -32,7 +32,7 @@
       },
       {
         "d": true,
-        "name": "_batch_id"
+        "name": "batch_id"
       }
     ]
   },
@@ -97,13 +97,11 @@
       "preview": true,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "DateFormatter",
+      "type": "CreateColumnWithGREL",
       "params": {
-        "inCol": "_ingestion_timestamp",
-        "outCol": "_batch_id",
-        "format": "yyyyMMdd_HHmmss",
-        "timezone_id": "UTC",
-        "lang": "auto"
+        "expression": "\"${batch_id}\"",
+        "column": "batch_id",
+        "errorColumn": ""
       },
       "alwaysShowComment": false
     }
@@ -137,26 +135,27 @@
   "flagNumericValues": true,
   "columnWidthsByName": {
     "order_delivered_customer_date": 253,
-    "payment_value": 134,
+    "batch_id": 120,
     "product_weight_g": 135,
-    "product_photos_qty": 150,
-    "payment_sequential": 150,
-    "product_width_cm": 135,
     "order_approved_at": 169,
-    "product_name_lenght": 158,
     "product_description_lenght": 210,
-    "product_length_cm": 143,
     "_source_system": 120,
     "order_status": 134,
     "product_category_name": 225,
-    "payment_type": 134,
     "order_purchase_timestamp": 218,
     "_ingestion_timestamp": 190,
+    "payment_installments": 165,
+    "product_id": 239,
+    "payment_value": 134,
+    "product_photos_qty": 150,
+    "payment_sequential": 150,
+    "product_width_cm": 135,
+    "product_name_lenght": 158,
+    "product_length_cm": 143,
+    "payment_type": 134,
     "_batch_id": 120,
     "product_height_cm": 143,
-    "payment_installments": 165,
     "order_estimated_delivery_date": 253,
-    "product_id": 239,
     "customer_id": 239,
     "order_id": 239,
     "order_delivered_carrier_date": 246
