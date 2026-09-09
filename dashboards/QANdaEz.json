@@ -44,6 +44,9 @@
               "fontColor": "#000000",
               "fontSize": 13
             },
+            "grid": {
+              "tiles": []
+            },
             "useDashboardSpacing": true,
             "tileSpacing": 8,
             "padding": 0,
