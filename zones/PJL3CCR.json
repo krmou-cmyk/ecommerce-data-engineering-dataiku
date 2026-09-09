@@ -1,7 +1,36 @@
 {
   "name": "Raw",
   "color": "#ADFF6C",
-  "items": [],
+  "items": [
+    {
+      "objectId": "Raw_customers_dataset",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Raw_order_items_dataset",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Raw_products_dataset",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Rawo_order_payments",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Raw_orders_dataset",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "raw_exchange_rates",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_raw_exchange_rates",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
