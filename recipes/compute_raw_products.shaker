@@ -48,7 +48,7 @@
       },
       {
         "d": true,
-        "name": "_batch_id"
+        "name": "batch_id"
       }
     ]
   },
@@ -113,13 +113,11 @@
       "preview": true,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "DateFormatter",
+      "type": "CreateColumnWithGREL",
       "params": {
-        "inCol": "_ingestion_timestamp",
-        "outCol": "_batch_id",
-        "format": "yyyyMMdd_HHmmss",
-        "timezone_id": "UTC",
-        "lang": "auto"
+        "expression": "\"${batch_id}\"",
+        "column": "batch_id",
+        "errorColumn": ""
       },
       "alwaysShowComment": false
     }
@@ -153,6 +151,7 @@
   "flagNumericValues": true,
   "columnWidthsByName": {
     "order_delivered_customer_date": 253,
+    "batch_id": 120,
     "product_weight_g": 135,
     "product_photos_qty": 150,
     "product_width_cm": 135,
