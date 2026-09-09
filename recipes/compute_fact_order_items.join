@@ -6,84 +6,123 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "product_id",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "product_id",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "order_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "order_item_id",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "product_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "seller_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "shipping_limit_date",
+      "type": "datetimenotz",
       "table": 0
     },
     {
       "name": "price",
+      "type": "double",
       "table": 0
     },
     {
       "name": "freight_value",
+      "type": "double",
       "table": 0
     },
     {
       "name": "_source_system",
+      "type": "string",
       "table": 0
     },
     {
       "name": "_ingestion_timestamp",
+      "type": "date",
       "table": 0
     },
     {
       "name": "_batch_id",
+      "type": "string",
       "table": 0
     },
     {
       "name": "product_category_name",
+      "type": "string",
       "table": 1
     },
     {
       "name": "product_name_length",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "product_description_length",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "product_photos_qty",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "product_weight_g",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "product_length_cm",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "product_height_cm",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "product_width_cm",
+      "type": "bigint",
       "table": 1
     },
     {
       "name": "_dw_loaded_at",
+      "type": "date",
       "table": 1
     }
   ],
@@ -151,5 +190,91 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "order_id",
+            "type": "string"
+          },
+          {
+            "name": "order_item_id",
+            "type": "bigint"
+          },
+          {
+            "name": "product_id",
+            "type": "string"
+          },
+          {
+            "name": "seller_id",
+            "type": "string"
+          },
+          {
+            "name": "shipping_limit_date",
+            "type": "datetimenotz"
+          },
+          {
+            "name": "price",
+            "type": "double"
+          },
+          {
+            "name": "freight_value",
+            "type": "double"
+          },
+          {
+            "name": "_source_system",
+            "type": "string"
+          },
+          {
+            "name": "_ingestion_timestamp",
+            "type": "date"
+          },
+          {
+            "name": "_batch_id",
+            "type": "string"
+          },
+          {
+            "name": "product_category_name",
+            "type": "string"
+          },
+          {
+            "name": "product_name_length",
+            "type": "bigint"
+          },
+          {
+            "name": "product_description_length",
+            "type": "bigint"
+          },
+          {
+            "name": "product_photos_qty",
+            "type": "bigint"
+          },
+          {
+            "name": "product_weight_g",
+            "type": "bigint"
+          },
+          {
+            "name": "product_length_cm",
+            "type": "bigint"
+          },
+          {
+            "name": "product_height_cm",
+            "type": "bigint"
+          },
+          {
+            "name": "product_width_cm",
+            "type": "bigint"
+          },
+          {
+            "name": "_dw_loaded_at",
+            "type": "date"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
