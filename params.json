@@ -23,7 +23,7 @@
       "zonesGraphConnectZones": true,
       "zonesGraphForJobs": true,
       "respectTraversalOrder": false,
-      "zonesManualPositioning": true,
+      "zonesManualPositioning": false,
       "showFlowZoneDescriptions": true
     },
     "gitCommitMode": "AUTO",
