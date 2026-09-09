@@ -27,10 +27,6 @@
       "objectType": "DATASET"
     },
     {
-      "objectId": "exchange_rates_daily",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "silver_payments_unicite_check",
       "objectType": "DATASET"
     },
@@ -88,10 +84,6 @@
     },
     {
       "objectId": "compute_silver_payments_by_payment_sequential",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_exchange_rates_daily",
       "objectType": "RECIPE"
     },
     {
