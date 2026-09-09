@@ -2,7 +2,7 @@ import dataiku
 import pandas as pd
 
 # Lire fact_orders pour récupérer la période réelle des commandes
-fact_orders = dataiku.Dataset("fact_orders").get_dataframe()
+fact_orders = dataiku.Dataset("Fact_order____prepared").get_dataframe()
 
 fact_orders["order_date"] = pd.to_datetime(fact_orders["order_date"])
 
