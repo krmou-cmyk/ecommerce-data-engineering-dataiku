@@ -1,6 +1,72 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "customer_id"
+      },
+      {
+        "d": true,
+        "name": "order_status"
+      },
+      {
+        "d": true,
+        "name": "order_purchase_timestamp"
+      },
+      {
+        "d": true,
+        "name": "order_date"
+      },
+      {
+        "d": true,
+        "name": "order_approved_at"
+      },
+      {
+        "d": true,
+        "name": "order_delivered_carrier_date"
+      },
+      {
+        "d": true,
+        "name": "order_delivered_customer_date"
+      },
+      {
+        "d": true,
+        "name": "order_estimated_delivery_date"
+      },
+      {
+        "d": true,
+        "name": "total_payment_brl"
+      },
+      {
+        "d": true,
+        "name": "_dw_loaded_at"
+      },
+      {
+        "d": true,
+        "name": "rate_date"
+      },
+      {
+        "d": true,
+        "name": "base_currency"
+      },
+      {
+        "d": true,
+        "name": "target_currency"
+      },
+      {
+        "d": true,
+        "name": "exchange_rate"
+      },
+      {
+        "d": true,
+        "name": "total_payment_eur"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +96,24 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "total_payment_brl * exchange_rate",
+        "column": "total_payment_eur",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +141,24 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "base_currency": 113,
+    "order_delivered_customer_date": 253,
+    "exchange_rate": 134,
+    "target_currency": 128,
+    "rate_date": 113,
+    "order_approved_at": 169,
+    "order_status": 134,
+    "order_date": 120,
+    "order_purchase_timestamp": 218,
+    "_dw_loaded_at": 183,
+    "order_estimated_delivery_date": 253,
+    "total_payment_eur": 169,
+    "customer_id": 239,
+    "total_payment_brl": 143,
+    "order_id": 239,
+    "order_delivered_carrier_date": 246
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
