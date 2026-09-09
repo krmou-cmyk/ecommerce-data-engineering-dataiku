@@ -1,6 +1,88 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "order_item_id"
+      },
+      {
+        "d": true,
+        "name": "product_id"
+      },
+      {
+        "d": true,
+        "name": "seller_id"
+      },
+      {
+        "d": true,
+        "name": "shipping_limit_date"
+      },
+      {
+        "d": true,
+        "name": "price"
+      },
+      {
+        "d": true,
+        "name": "freight_value"
+      },
+      {
+        "d": true,
+        "name": "item_total_br"
+      },
+      {
+        "d": true,
+        "name": "_source_system"
+      },
+      {
+        "d": true,
+        "name": "_ingestion_timestamp"
+      },
+      {
+        "d": true,
+        "name": "_batch_id"
+      },
+      {
+        "d": true,
+        "name": "product_category_name"
+      },
+      {
+        "d": true,
+        "name": "product_name_length"
+      },
+      {
+        "d": true,
+        "name": "product_description_length"
+      },
+      {
+        "d": true,
+        "name": "product_photos_qty"
+      },
+      {
+        "d": true,
+        "name": "product_weight_g"
+      },
+      {
+        "d": true,
+        "name": "product_length_cm"
+      },
+      {
+        "d": true,
+        "name": "product_height_cm"
+      },
+      {
+        "d": true,
+        "name": "product_width_cm"
+      },
+      {
+        "d": true,
+        "name": "_dw_loaded_at"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +112,24 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "price + freight_value",
+        "column": "item_total_br",
+        "errorColumn": ""
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +157,28 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "product_name_length": 158,
+    "product_description_length": 210,
+    "product_weight_g": 135,
+    "product_photos_qty": 150,
+    "product_width_cm": 135,
+    "item_total_br": 134,
+    "product_length_cm": 143,
+    "order_item_id": 113,
+    "_source_system": 120,
+    "product_category_name": 225,
+    "_ingestion_timestamp": 190,
+    "_dw_loaded_at": 183,
+    "_batch_id": 120,
+    "product_height_cm": 143,
+    "price": 134,
+    "product_id": 239,
+    "order_id": 239,
+    "freight_value": 134,
+    "seller_id": 239,
+    "shipping_limit_date": 183
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
