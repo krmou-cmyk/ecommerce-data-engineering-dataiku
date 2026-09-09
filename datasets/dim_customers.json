@@ -2,6 +2,7 @@
   "type": "S3",
   "managed": true,
   "featureGroup": false,
+  "shortDesc": "Dimension",
   "formatType": "csv",
   "checklists": {
     "checklists": []
